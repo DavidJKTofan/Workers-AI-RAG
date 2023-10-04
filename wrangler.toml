@@ -1,0 +1,15 @@
+name = "workers-ai-rag"
+main = "src/index.js"
+compatibility_date = "2023-09-22"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTOR_INDEX"  # available within your Worker on env.VECTORIZE_INDEX
+index_name = "vector-index"
+
+[[d1_databases]]
+binding = "dls-db"  # available in your Worker on env.DB
+database_name = "dls-db"
+database_id = "XXXXXXXX_XXXXXXXXXXXX"

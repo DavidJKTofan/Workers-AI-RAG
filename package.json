@@ -1,0 +1,16 @@
+{
+  "name": "workers-ai-rag",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@cloudflare/ai": "^1.0.14",
+    "hono": "^3.7.3"
+  }
+}
