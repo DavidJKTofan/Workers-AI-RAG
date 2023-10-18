@@ -65,6 +65,13 @@ app.get("/", async (c) => {
 
   const question = c.req.query("text") || "What is the square root of 9?";
 
+  // Conditional
+  const maxLength = 500;
+  if (question && question.length > maxLength) {
+    // Return a warning when the query text is too long
+    console.log("Query text is too long. Keep it under 500 characters.");
+    return c.json("Rejected. Your query is too long...", 500);
+  }
   const embeddings = await ai.run("@cf/baai/bge-large-en-v1.5", {
     text: question,
   });
