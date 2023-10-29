@@ -15,7 +15,7 @@ Tutorial: https://developers.cloudflare.com/workers-ai/tutorials/build-a-retriev
 
 Visit `ai.cf-testing.com` and add your question to the `?text=` query:
 ```
-https://ai.cf-testing.com/?text=What%20is%20the%20capital%20of%20Paris?
+https://ai.cf-testing.com/?text=What%20is%20the%20capital%20of%20France?
 ```
 
 # Disclaimer
