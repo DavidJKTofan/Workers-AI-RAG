@@ -1,6 +1,7 @@
 name = "workers-ai-rag"
 main = "src/index.js"
 compatibility_date = "2023-09-22"
+workers_dev = false
 
 [ai]
 binding = "AI"
