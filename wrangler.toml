@@ -12,4 +12,4 @@ index_name = "vector-index"
 [[d1_databases]]
 binding = "dls-db"  # available in your Worker on env.DB
 database_name = "dls-db"
-database_id = "XXXXXXXX_XXXXXXXXXXXX"
+database_id = "f85bddd6-01d7-4e53-98ab-b9d0884a62e5"

@@ -1,4 +1,3 @@
-import { Ai } from "@cloudflare/ai";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 const app = new Hono();
@@ -22,7 +21,7 @@ app.options("*", (c) => {
 // NOTES
 // wrangler d1 execute dls-db --command "INSERT INTO notes (text) VALUES ('The best pizza topping is pepperoni')"
 app.post("/notes", async (c) => {
-  const ai = new Ai(c.env.AI);
+  const ai = c.env.AI;
 
   const { text } = await c.req.json();
   if (!text) {
@@ -61,7 +60,7 @@ app.post("/notes", async (c) => {
 
 // INDEX
 app.get("/", async (c) => {
-  const ai = new Ai(c.env.AI);
+  const ai = c.env.AI;
 
   const question = c.req.query("text") || "What is the square root of 9?";
 
@@ -96,7 +95,7 @@ app.get("/", async (c) => {
 
   const systemPrompt = `When answering the question or responding, use the context provided, if it is provided and relevant. Limit your answers to 180 words or less.`;
 
-  const { response: answer } = await ai.run("@cf/meta/llama-2-7b-chat-int8", {
+  const { response: answer } = await ai.run("@cf/meta/llama-3.1-8b-instruct", {
     messages: [
       ...(notes.length ? [{ role: "system", content: contextMessage }] : []),
       { role: "system", content: systemPrompt },
