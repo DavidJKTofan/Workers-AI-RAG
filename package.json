@@ -10,7 +10,7 @@
     "wrangler": "^3.68.0"
   },
   "dependencies": {
-    "@cloudflare/ai": "^1.0.14",
+    "@cloudflare/ai": "^1.2.2",
     "hono": "^4.5.3"
   }
 }
